@@ -1,0 +1,2 @@
+class Correct < ApplicationRecord
+end

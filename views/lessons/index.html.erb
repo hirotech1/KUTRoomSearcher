@@ -1,0 +1,36 @@
+<div class="main">
+  <h1>検索結果</h1>
+  <div class="result-area">
+    <div class="index-area">
+      <% @lessons.each do |lesson| %>
+        <div class="flex-list">
+          <div class="index-left">
+            <%= link_to(lesson.lesson_name , "/lessons/#{lesson.id}") %>
+          </div>
+          <div class="index-right">
+            <%=lesson.teacher_name%> 先生
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="note-area">
+      <h2>講義がない場合</h2>
+      <ul class="note-list">
+        <li>漢字で入力していますか？</li>
+        <li>文字は正確ですか？</li>
+        <li>一部分で検索してみてください</li>
+        <li>例)「熱力学特論」→「熱」</li>
+        <li>それでもない場合は講義の追加をお願いします</li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="add btn">
+      <%= link_to("講義の追加", "/lessons/add") %> 
+    </div>
+    <div class="to-top btn">
+      <%= link_to("検索TOP", "/") %>
+    </div>
+  </div
+</div>

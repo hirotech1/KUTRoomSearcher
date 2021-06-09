@@ -1,0 +1,22 @@
+<div class="main">
+  <h1>My講義一覧</h1>
+  <div class="index-area">
+    <% @mylessons.each do |mylesson| %>
+      <div class="flex-list">
+        <% lesson = Lesson.find_by(id: mylesson.lesson_id) %> 
+        <div class="index-left my">
+          <%= link_to(lesson.lesson_name , "/lessons/#{lesson.id}") %>
+        </div>
+        <div class="index-right my">
+          <%=lesson.teacher_name%> 先生
+        </div>
+        <div class="index-most-right my">
+          <%= link_to("My講義から外す", "/mylessons/#{lesson.id}/unregister/frommypage" , {method: "post"}) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="btn">
+    <%= link_to("検索TOP", "/") %>
+  </div>
+</div>

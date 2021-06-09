@@ -1,0 +1,2 @@
+class Mylesson < ApplicationRecord
+end
