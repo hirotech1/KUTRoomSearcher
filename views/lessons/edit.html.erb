@@ -1,0 +1,36 @@
+<div class="main">
+  <div class="search-area">
+    <%= form_tag("/lessons/#{@lesson.id}/update") do %>
+      <div class="search-unit">
+        <p>講義名 <span>※必須</span></p>
+        <input name="lesson_name" value="<%=@lesson.lesson_name%>" placeholder="漢字で正確に入力">
+      </div>
+      <div class="search-unit">
+        <p>先生の名前 <span>※必須</span></p>
+        <input
+          name="teacher_name" 
+          class="teacher" 
+          value="<%=@lesson.teacher_name%>" 
+          placeholder="名字のみを漢字で入力"
+        ><a>先生</a>
+      </div>
+      <div class="search-unit">
+        <p>先生の部屋 <span>※必須</span></p>
+       <input name="teacher_room" value="<%=@lesson.teacher_room%>" placeholder="例）A400 A棟の機械系のところ">
+      </div>
+      <div class="search-unit">
+        <p>TAさんの部屋</p>
+        <input name="TA_room" value="<%=@lesson.TA_room%>"
+        placeholder="例）A200 B300">
+      </div>
+      <input type="submit" value="変更する" class="submit">
+    <% end %>
+    <div class="to-top btn">
+      <%= link_to("検索TOP", "/") %>
+    </div>
+  </div>
+
+  <div class="destroy">
+    <%= link_to("講義情報の削除","/lessons/#{@lesson.id}/destroy") %>
+  </div>
+</div>

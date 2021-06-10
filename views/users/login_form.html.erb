@@ -1,0 +1,35 @@
+<div class="main ">
+  <div class="container">
+    <h1>ログイン</h1>
+    <div class="form users-form">
+      <div class="form-body">
+        <% if @error_message %>
+          <div class="form-error">
+            <%= @error_message %>
+          </div>
+        <% end %>
+        <div class="search-area">
+          <%= form_tag("/users/login") do %>
+            <div class="search-unit">
+              <p>ユーザー名</p>
+              <input  name="name" value="<%= @name %>">
+            </div>
+            <div class="search-unit">  
+              <p>パスワード</p>
+              <input  type="password" name="password" value="<%= @password %>">
+            </div>
+            <input type="submit" value="ログイン" class="submit rogin" >
+          <% end %>
+
+          <p class="reg-rec">もしくは<%= link_to("新規登録", "/users/new") %></p>
+
+        </div>
+
+      </div>
+
+      <div class="btn">
+        <%= link_to("検索TOP", "/") %>
+      </div>
+    </div>
+  </div>
+</div>

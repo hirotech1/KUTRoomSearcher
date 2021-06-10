@@ -1,0 +1,75 @@
+<div class="main">
+  <h1>授業詳細</h1>
+
+  <div class="detail-area">
+    <div class="detail-box">
+      <p class="detail-left">授業名</p>
+      <p class="detail-right"><%=@lesson.lesson_name%></p>
+    </div>
+    <div class="detail-box">
+      <p class="detail-left">先生</p>
+      <p class="detail-right"><%=@lesson.teacher_name%> 先生</p>
+    </div>
+    <div class="detail-box">
+      <p class="detail-left">先生の部屋</p>
+      <p class="detail-right"><%=@lesson.teacher_room%></p>
+    </div>
+    <div class="detail-box">
+      <p class="detail-left">TAさんの部屋</p>
+      <p class="detail-right"><%=@lesson.TA_room%></p>
+    </div>
+
+  </div>
+  
+  
+
+  <% if @current_user %>
+    <% if Mylesson.find_by(user_id: @current_user.id, lesson_id: @lesson.id) %>
+      <p>
+      <%= link_to("My講義から外す", "/mylessons/#{@lesson.id}/unregister" , {method: "post"}) %>
+      </p>
+    <% else %>
+      <div class="btn">
+        <%= link_to("My講義登録", "/mylessons/#{@lesson.id}/register" , {method: "post"}) %> 
+      </div>
+    <% end %>
+
+    <% if not Correct.find_by(user_id: @current_user.id, lesson_id: @lesson.id) %>
+      <div class="btn-box">
+        <div class="btn correct">
+          <%= link_to("正確", "/corrects/#{@lesson.id}/create" , {method: "post"}) %> 
+        </div>
+        <div  class="btn edit">
+          <%= link_to("編集", "/lessons/#{@lesson.id}/edit") %> 
+        </div>
+      </div>
+      <div>情報に間違いがなければ「正確」ボタンを押してください</div>
+    <% else %>
+      <div  class="btn edit2">
+        <%= link_to("編集", "/lessons/#{@lesson.id}/edit") %> 
+      </div>
+    <% end %>
+
+  <% else %>
+
+    <div class="rogin-rec">ログインすればMy講義に登録できます。</div>
+    <div class="btn rogin-btn">
+      <%= link_to("ログイン", "/users/login" )%>
+    </div>
+    <div  class="btn edit2">
+    <%= link_to("編集", "/lessons/#{@lesson.id}/edit") %> 
+  </div>
+  <% end %>
+  <div class="count">
+    正確な情報と答えた人数　
+    <%=@corrects_count%>人
+  </div>
+  
+  <div>
+    更新日
+    <%=@lesson.updated_at.to_s(:datetime_jp)%>
+  </div>
+  <div  class="btn">
+    <%= link_to("検索TOP", "/") %>
+  </div>
+</div>
