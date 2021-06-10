@@ -1,0 +1,129 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* reset ================================ */
+* {
+  box-sizing: border-box; 
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  // color: blue;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+
+h1{
+  border-bottom: 2px  solid #dee7ec;
+  padding:0px 0px 15px;
+  margin:0px 0px 50px;
+}
+// h1, h2, h3, h4, h5, h6, p {
+//   margin: 0;
+// }
+
+// input {
+//   background-color: transparent;
+//   outline-width: 0;
+// }
+
+
+/* 共通レイアウト ================================ */
+body {
+  margin: 0;
+}
+
+.main{
+  padding: 20px 10%;
+}
+
+.bottom{
+  margin-top: 30px;
+}
+
+.btn{
+  height: 40px;
+  width: 300px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  background-color: #599820;
+  margin-top: 30px;
+  border: 0;
+}
+
+.btn a{
+  color: white;
+  font-size: 20px;
+}
+
+.to-top{
+  margin-top: 30px;
+  background-color: #599820;
+}
+
+.to-top a{
+  color: white;
+  line-height: 100%;
+  font-size: 20px;
+}
+
+/* ヘッダー ================================ */
+header {
+  height: 64px;
+  // position: absolute;
+  z-index: 1;
+  width: 100%;
+  background: #599820;
+}
+
+.header-logo {
+  // height: 100%;
+  float: left;
+  font-size: 36px;
+  padding: 0px 40px;
+  color: white;
+  line-height: 64px;
+  font-weight: bold;
+}
+
+.header-menus {
+  float: right;
+  padding-right: 20px;
+  margin: 0%;
+}
+
+.header-menus li {
+  float: left;
+  line-height: 64px;
+  font-size: 20px;
+  color: white;
+  padding: 0px 15px;
+}
+
+header a{
+  color: white;
+}
+
+
+
+
+/* フラッシュ ================================ */
+.flash {
+  padding: 10px 0;
+  color: rgb(255, 255, 255);
+  background: rgba(133, 132, 132, 0.747);
+  text-align: center;
+  // position: absolute;
+  top: 64px;
+  z-index: 10;
+  width: 100%;
+  border-radius: 0 0 2px 2px;
+  font-size: 18px;
+}

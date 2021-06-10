@@ -1,0 +1,185 @@
+// Place all the styles related to the search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* index ================================ */
+
+.index-left{
+  text-align: left;
+  padding-right: 10px;
+  padding-left: 30px;
+  width: 60%;
+  // float: left;
+  overflow: hidden;
+}
+.index-right{
+  text-align: left;
+  padding-left: 10px;
+  width: 40%;
+  // float: right;
+  overflow: hidden;
+}
+
+
+.index-area{
+  width: 70%;
+  // float: left;
+  padding-right: 10%;
+  line-height: 28px;
+}
+
+.index-area a{
+  color:blue;
+}
+
+.flex-list{
+  display: flex;
+  border-bottom: 1px grey solid;
+}
+
+.flex-list a{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.note-area{
+  // float: right;
+  width: 30%;
+}
+
+.result-area{
+  height: auto;
+  display: flex;
+}
+
+.note-area h2{
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.note-list{
+  line-height: 30px;
+}
+
+.add{
+  margin-top: 60px;
+  background-color: #599820;
+}
+
+.add a{
+  color: white;
+  line-height: 100%;
+  font-size: 20px;
+}
+/* add edit================================ */
+// search.scssと同じ
+span{
+  color: red;
+}
+
+.destroy{
+  height: 40px;
+  margin-top: 30px;
+  background-color: gray;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.destroy a{
+  color: white;
+  line-height: 100%;
+  font-size: 16px;
+}
+
+/* show================================ */
+
+.detail-area{
+  width: 600px;
+  font-size: 20px;
+  
+}
+
+.detail-box{
+  display: flex;
+  border-bottom: gray solid 1px;
+  
+}
+
+.detail-left{
+  width: 30%;
+  margin: 10px 0;
+}
+
+.detail-right{
+  margin: 10px 0;
+}
+
+.correct , .edit{
+  width: 140px;
+}
+
+.correct{
+  margin-right: auto;
+}
+
+.edit, .edit2{
+  background-color: gray;
+}
+
+.btn-box{
+  display: flex;
+  width: 300px;
+}
+
+.count{
+  margin-top: 20px;
+}
+
+.rogin-btn{
+  margin-top: 0;
+}
+
+.rogin-rec{
+  margin: 30px 0 10px;
+}
+
+
+/* login-form================================ */
+
+.reg-rec{
+  margin-top: 10px;
+}
+
+.reg-rec a{
+  color: blue;
+}
+ input .btn{
+   color: white;
+ }
+
+ .submit.rogin{
+   margin-top: 20px;
+ }
+
+/* mypage================================ */
+
+.index-left.my {
+  width: 40%;
+  padding-left: 10px;
+}
+
+.index-right.my{
+  width: 30%;
+}
+
+.index-most-right{
+  text-align: left;
+  padding-left: 10px;
+  width: 30%;
+  // float: right;
+  overflow: hidden;
+  
+} 
