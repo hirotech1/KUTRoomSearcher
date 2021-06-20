@@ -25,9 +25,9 @@
 
   <% if @current_user %>
     <% if Mylesson.find_by(user_id: @current_user.id, lesson_id: @lesson.id) %>
-      <p>
+      <div class="btn">
       <%= link_to("My講義から外す", "/mylessons/#{@lesson.id}/unregister" , {method: "post"}) %>
-      </p>
+      </div>
     <% else %>
       <div class="btn">
         <%= link_to("My講義登録", "/mylessons/#{@lesson.id}/register" , {method: "post"}) %> 

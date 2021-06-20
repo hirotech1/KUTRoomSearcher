@@ -56,11 +56,18 @@ body {
   background-color: #599820;
   margin-top: 30px;
   border: 0;
+  
+}
+
+.btn:hover{
+  opacity: 0.7;
 }
 
 .btn a{
   color: white;
   font-size: 20px;
+  display: block;
+  line-height: 40px;
 }
 
 .to-top{
@@ -70,7 +77,7 @@ body {
 
 .to-top a{
   color: white;
-  line-height: 100%;
+  // line-height: 100%;
   font-size: 20px;
 }
 
@@ -83,6 +90,30 @@ header {
   background: #599820;
 }
 
+header{
+  display: block;
+}
+
+.fa.menu-icon{
+  display: none;
+  font-size:25px;
+  // padding:21px 0;
+  text-align:right;
+  color:white;
+  line-height: 64px;
+  padding-right: 20px;
+}
+
+li > a {
+  display: block;
+  transition: all 0.5s;
+}
+
+li > a:hover{
+  opacity: 0.7;
+  background: #baf08b75;
+}
+
 .header-logo {
   // height: 100%;
   float: left;
@@ -91,6 +122,13 @@ header {
   color: white;
   line-height: 64px;
   font-weight: bold;
+  display: block;
+  transition: all 0.5s;
+}
+
+.header-logo:hover{
+  opacity: 0.7;
+  background: #baf08b75;
 }
 
 .header-menus {
@@ -126,4 +164,25 @@ header a{
   width: 100%;
   border-radius: 0 0 2px 2px;
   font-size: 18px;
+}
+
+/* レスポンシブデザイン=======================*/
+
+@media all and (max-width: 670px) {
+
+
+  .search-area{
+    width: 300px;
+  }
+}
+
+@media all and (max-width: 800px) {
+
+  .header-menus {
+    display: none;
+  }
+
+  .fa.menu-icon{
+    display: block;
+  }
 }
